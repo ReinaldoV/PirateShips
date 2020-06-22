@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		9E23B7B024A0C85A0050FFC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23B7AF24A0C85A0050FFC0 /* AppDelegate.swift */; };
 		9E23B7B224A0C85A0050FFC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23B7B124A0C85A0050FFC0 /* SceneDelegate.swift */; };
-		9E23B7B424A0C85A0050FFC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23B7B324A0C85A0050FFC0 /* ViewController.swift */; };
+		9E23B7B424A0C85A0050FFC0 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23B7B324A0C85A0050FFC0 /* SelectionViewController.swift */; };
 		9E23B7B724A0C85A0050FFC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E23B7B524A0C85A0050FFC0 /* Main.storyboard */; };
 		9E23B7B924A0C85C0050FFC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E23B7B824A0C85C0050FFC0 /* Assets.xcassets */; };
 		9E23B7BC24A0C85C0050FFC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E23B7BA24A0C85C0050FFC0 /* LaunchScreen.storyboard */; };
 		9E23B7C724A0C85C0050FFC0 /* PirateShipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23B7C624A0C85C0050FFC0 /* PirateShipsTests.swift */; };
+		9E23B7D524A0DAE70050FFC0 /* BoatSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23B7D424A0DAE70050FFC0 /* BoatSelectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +31,7 @@
 		9E23B7AC24A0C85A0050FFC0 /* PirateShips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PirateShips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E23B7AF24A0C85A0050FFC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E23B7B124A0C85A0050FFC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9E23B7B324A0C85A0050FFC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9E23B7B324A0C85A0050FFC0 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		9E23B7B624A0C85A0050FFC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E23B7B824A0C85C0050FFC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E23B7BB24A0C85C0050FFC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +39,7 @@
 		9E23B7C224A0C85C0050FFC0 /* PirateShipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PirateShipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E23B7C624A0C85C0050FFC0 /* PirateShipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PirateShipsTests.swift; sourceTree = "<group>"; };
 		9E23B7C824A0C85C0050FFC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E23B7D424A0DAE70050FFC0 /* BoatSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatSelectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +81,9 @@
 		9E23B7AE24A0C85A0050FFC0 /* PirateShips */ = {
 			isa = PBXGroup;
 			children = (
+				9E23B7D124A0D9EB0050FFC0 /* ViewControllers */,
 				9E23B7AF24A0C85A0050FFC0 /* AppDelegate.swift */,
 				9E23B7B124A0C85A0050FFC0 /* SceneDelegate.swift */,
-				9E23B7B324A0C85A0050FFC0 /* ViewController.swift */,
 				9E23B7B524A0C85A0050FFC0 /* Main.storyboard */,
 				9E23B7B824A0C85C0050FFC0 /* Assets.xcassets */,
 				9E23B7BA24A0C85C0050FFC0 /* LaunchScreen.storyboard */,
@@ -97,6 +99,31 @@
 				9E23B7C824A0C85C0050FFC0 /* Info.plist */,
 			);
 			path = PirateShipsTests;
+			sourceTree = "<group>";
+		};
+		9E23B7D124A0D9EB0050FFC0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E23B7D224A0DA040050FFC0 /* SelectionViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9E23B7D224A0DA040050FFC0 /* SelectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9E23B7D324A0DA5A0050FFC0 /* Cells */,
+				9E23B7B324A0C85A0050FFC0 /* SelectionViewController.swift */,
+			);
+			path = SelectionViewController;
+			sourceTree = "<group>";
+		};
+		9E23B7D324A0DA5A0050FFC0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9E23B7D424A0DAE70050FFC0 /* BoatSelectionCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +227,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E23B7B424A0C85A0050FFC0 /* ViewController.swift in Sources */,
+				9E23B7B424A0C85A0050FFC0 /* SelectionViewController.swift in Sources */,
 				9E23B7B024A0C85A0050FFC0 /* AppDelegate.swift in Sources */,
+				9E23B7D524A0DAE70050FFC0 /* BoatSelectionCell.swift in Sources */,
 				9E23B7B224A0C85A0050FFC0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
