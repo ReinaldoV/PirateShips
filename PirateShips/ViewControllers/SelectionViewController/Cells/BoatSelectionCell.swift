@@ -34,11 +34,20 @@ class BoatSelectionCell: UICollectionViewCell {
         return view
     }()
 
-    lazy var titleLabel: UILabel = {
+    lazy var priceLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "HelveticaNeue", size: 20)
-        label.textColor = .systemBlue
+        label.font = UIFont(name: "HelveticaNeueBold", size: 20)
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    lazy var descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "HelveticaNeue", size: 12)
+        label.textColor = .systemGray
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 2
         return label
     }()
 
@@ -58,7 +67,8 @@ extension BoatSelectionCell {
     private func setupUI() {
         self.contentView.addSubview(roundedBackgroundView)
         roundedBackgroundView.addSubview(imageView)
-        roundedBackgroundView.addSubview(titleLabel)
+        roundedBackgroundView.addSubview(priceLabel)
+        roundedBackgroundView.addSubview(descriptionLabel)
 
         NSLayoutConstraint.activate([
             roundedBackgroundView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 5),
@@ -66,11 +76,14 @@ extension BoatSelectionCell {
             roundedBackgroundView.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 5),
             roundedBackgroundView.rightAnchor.constraint(equalTo: self.contentView.rightAnchor, constant: -5),
             imageView.topAnchor.constraint(equalTo: self.roundedBackgroundView.topAnchor, constant: 0),
-            imageView.heightAnchor.constraint(equalTo: self.roundedBackgroundView.heightAnchor, multiplier: 0.35),
+            imageView.heightAnchor.constraint(equalTo: self.roundedBackgroundView.heightAnchor, multiplier: 0.55),
             imageView.leftAnchor.constraint(equalTo: self.roundedBackgroundView.leftAnchor, constant: 0),
             imageView.rightAnchor.constraint(equalTo: self.roundedBackgroundView.rightAnchor, constant: 0),
-            titleLabel.centerXAnchor.constraint(equalTo: roundedBackgroundView.centerXAnchor),
-            titleLabel.centerYAnchor.constraint(equalTo: roundedBackgroundView.centerYAnchor)
+            priceLabel.topAnchor.constraint(equalTo: self.imageView.bottomAnchor, constant: 7),
+            priceLabel.leftAnchor.constraint(equalTo: self.roundedBackgroundView.leftAnchor, constant: 5),
+            descriptionLabel.topAnchor.constraint(equalTo: self.priceLabel.bottomAnchor, constant: 7),
+            descriptionLabel.leftAnchor.constraint(equalTo: self.roundedBackgroundView.leftAnchor, constant: 5),
+            descriptionLabel.rightAnchor.constraint(equalTo: self.roundedBackgroundView.rightAnchor, constant: -7)
         ])
 
     }

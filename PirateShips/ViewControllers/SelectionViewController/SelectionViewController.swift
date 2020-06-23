@@ -78,7 +78,8 @@ extension SelectionViewController: UICollectionViewDelegate, UICollectionViewDat
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.kBoatSelectionCellIdentifier, for: indexPath) as! BoatSelectionCell
-        cell.titleLabel.text = titles[indexPath.item]
+        cell.priceLabel.text = titles[indexPath.item]
+        cell.descriptionLabel.text = "TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST "
         return cell
     }
 
