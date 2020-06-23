@@ -15,7 +15,7 @@ class ShipsServiceMapper {
             let ship = Ship(title: shipData?.title,
                             description: shipData?.description,
                             price: shipData?.price,
-                            imageURL: shipData?.imageURL,
+                            imageURL: shipData?.image,
                             greeting: shipData?.greetingType?.pirateGreeting() ?? .Ahoi)
             shipList.append(ship)
         }

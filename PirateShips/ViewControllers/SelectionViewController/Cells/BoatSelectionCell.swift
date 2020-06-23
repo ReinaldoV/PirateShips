@@ -55,7 +55,7 @@ class BoatSelectionCell: UICollectionViewCell {
         let image = UIImageView()
         image.contentMode = .scaleAspectFill
         image.clipsToBounds = true
-        image.image = UIImage(named: "testImage")
+        image.image = UIImage(named: "placeHolderShip")
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()

@@ -13,7 +13,7 @@ struct ShipDTO: Codable {
     let title: String?
     let description: String?
     let price: Int?
-    let imageURL: URL?
+    let image: URL?
     let greetingType: PirateGreetingDTO?
 }
 

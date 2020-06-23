@@ -22,6 +22,7 @@
 		9E23B7E324A26C490050FFC0 /* ShipsServiceMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23B7E224A26C490050FFC0 /* ShipsServiceMapper.swift */; };
 		9E23B7E524A272000050FFC0 /* SelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23B7E424A272000050FFC0 /* SelectionPresenter.swift */; };
 		9E23B7E724A272EE0050FFC0 /* SelectionContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23B7E624A272EE0050FFC0 /* SelectionContracts.swift */; };
+		9E23B7EE24A282D40050FFC0 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23B7ED24A282D40050FFC0 /* UIImageViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		9E23B7E224A26C490050FFC0 /* ShipsServiceMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipsServiceMapper.swift; sourceTree = "<group>"; };
 		9E23B7E424A272000050FFC0 /* SelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionPresenter.swift; sourceTree = "<group>"; };
 		9E23B7E624A272EE0050FFC0 /* SelectionContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionContracts.swift; sourceTree = "<group>"; };
+		9E23B7ED24A282D40050FFC0 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		9E23B7AE24A0C85A0050FFC0 /* PirateShips */ = {
 			isa = PBXGroup;
 			children = (
+				9E23B7EB24A282BA0050FFC0 /* Helpers */,
 				9E23B7D724A265480050FFC0 /* Network */,
 				9E23B7D124A0D9EB0050FFC0 /* ViewControllers */,
 				9E23B7AF24A0C85A0050FFC0 /* AppDelegate.swift */,
@@ -169,6 +172,14 @@
 				9E23B7E024A26A060050FFC0 /* Ship.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9E23B7EB24A282BA0050FFC0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9E23B7ED24A282D40050FFC0 /* UIImageViewExtensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +293,7 @@
 				9E23B7D524A0DAE70050FFC0 /* BoatSelectionCell.swift in Sources */,
 				9E23B7E724A272EE0050FFC0 /* SelectionContracts.swift in Sources */,
 				9E23B7B224A0C85A0050FFC0 /* SceneDelegate.swift in Sources */,
+				9E23B7EE24A282D40050FFC0 /* UIImageViewExtensions.swift in Sources */,
 				9E23B7DC24A265A60050FFC0 /* ShipDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
