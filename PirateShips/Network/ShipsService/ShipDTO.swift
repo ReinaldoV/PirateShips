@@ -22,4 +22,17 @@ enum PirateGreetingDTO: String, Codable {
     case Aye = "ay"
     case Arrr = "ar"
     case Yo = "yo"
+
+    func pirateGreeting() -> PirateGreeting {
+        switch self {
+        case .Ahoi:
+            return .Ahoi
+        case .Aye:
+            return .Aye
+        case .Arrr:
+            return .Ar
+        case .Yo:
+            return .Yo
+        }
+    }
 }

@@ -17,6 +17,9 @@
 		9E23B7D524A0DAE70050FFC0 /* BoatSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23B7D424A0DAE70050FFC0 /* BoatSelectionCell.swift */; };
 		9E23B7DA24A265980050FFC0 /* ShipsServiceDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23B7D924A265980050FFC0 /* ShipsServiceDTO.swift */; };
 		9E23B7DC24A265A60050FFC0 /* ShipDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23B7DB24A265A60050FFC0 /* ShipDTO.swift */; };
+		9E23B7DE24A2692F0050FFC0 /* ShipsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23B7DD24A2692F0050FFC0 /* ShipsService.swift */; };
+		9E23B7E124A26A060050FFC0 /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23B7E024A26A060050FFC0 /* Ship.swift */; };
+		9E23B7E324A26C490050FFC0 /* ShipsServiceMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23B7E224A26C490050FFC0 /* ShipsServiceMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		9E23B7D424A0DAE70050FFC0 /* BoatSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatSelectionCell.swift; sourceTree = "<group>"; };
 		9E23B7D924A265980050FFC0 /* ShipsServiceDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipsServiceDTO.swift; sourceTree = "<group>"; };
 		9E23B7DB24A265A60050FFC0 /* ShipDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipDTO.swift; sourceTree = "<group>"; };
+		9E23B7DD24A2692F0050FFC0 /* ShipsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipsService.swift; sourceTree = "<group>"; };
+		9E23B7E024A26A060050FFC0 /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
+		9E23B7E224A26C490050FFC0 /* ShipsServiceMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipsServiceMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 		9E23B7AE24A0C85A0050FFC0 /* PirateShips */ = {
 			isa = PBXGroup;
 			children = (
+				9E23B7DF24A269F90050FFC0 /* Models */,
 				9E23B7D724A265480050FFC0 /* Network */,
 				9E23B7D124A0D9EB0050FFC0 /* ViewControllers */,
 				9E23B7AF24A0C85A0050FFC0 /* AppDelegate.swift */,
@@ -144,8 +151,18 @@
 			children = (
 				9E23B7D924A265980050FFC0 /* ShipsServiceDTO.swift */,
 				9E23B7DB24A265A60050FFC0 /* ShipDTO.swift */,
+				9E23B7DD24A2692F0050FFC0 /* ShipsService.swift */,
+				9E23B7E224A26C490050FFC0 /* ShipsServiceMapper.swift */,
 			);
 			path = ShipsService;
+			sourceTree = "<group>";
+		};
+		9E23B7DF24A269F90050FFC0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9E23B7E024A26A060050FFC0 /* Ship.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E23B7B424A0C85A0050FFC0 /* SelectionViewController.swift in Sources */,
+				9E23B7E124A26A060050FFC0 /* Ship.swift in Sources */,
 				9E23B7DA24A265980050FFC0 /* ShipsServiceDTO.swift in Sources */,
+				9E23B7E324A26C490050FFC0 /* ShipsServiceMapper.swift in Sources */,
+				9E23B7DE24A2692F0050FFC0 /* ShipsService.swift in Sources */,
 				9E23B7B024A0C85A0050FFC0 /* AppDelegate.swift in Sources */,
 				9E23B7D524A0DAE70050FFC0 /* BoatSelectionCell.swift in Sources */,
 				9E23B7B224A0C85A0050FFC0 /* SceneDelegate.swift in Sources */,
