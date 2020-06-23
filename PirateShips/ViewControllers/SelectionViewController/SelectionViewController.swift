@@ -54,7 +54,7 @@ extension SelectionViewController {
 
     private func collectionViewLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewFlowLayout()
-        let cellWidthHeightConstant: CGFloat = UIScreen.main.bounds.width * 0.2
+        let cellWidthHeightConstant: CGFloat = UIScreen.main.bounds.width * 0.45
 
         layout.sectionInset = UIEdgeInsets(top: 0,
                                            left: 10,
