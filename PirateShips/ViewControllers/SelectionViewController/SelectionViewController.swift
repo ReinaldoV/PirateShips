@@ -78,8 +78,9 @@ extension SelectionViewController: UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.kBoatSelectionCellIdentifier,
                                                          for: indexPath) as? BoatSelectionCell,
-            let shipInfo = self.presenter?.shipInfo(atIndex: indexPath.row){
+            let shipInfo = self.presenter?.shipInfo(atIndex: indexPath.row) {
             cell.priceLabel.text = shipInfo.price?.description ?? ""
+            cell.moneyImageView.isHidden = shipInfo.price == nil
             cell.descriptionLabel.text = shipInfo.description
             return cell
         }
@@ -91,16 +92,16 @@ extension SelectionViewController: SelectionViewControllerProtocol {
     func refreshTable() {
         self.collectionView.reloadData()
     }
-    
+
     func startLoading() {
-        
+
     }
-    
+
     func stopLoading() {
-        
+
     }
-    
+
     func showMessage(_ message: String) {
-        
+
     }
 }

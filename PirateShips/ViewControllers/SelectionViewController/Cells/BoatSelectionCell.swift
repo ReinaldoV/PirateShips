@@ -41,7 +41,7 @@ class BoatSelectionCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "HelveticaNeue", size: 12)
@@ -60,6 +60,16 @@ class BoatSelectionCell: UICollectionViewCell {
         return image
     }()
 
+    lazy var moneyImageView: UIImageView = {
+        let image = UIImageView()
+        image.contentMode = .scaleAspectFit
+        image.clipsToBounds = true
+        image.image = UIImage(named: "goldCoins")
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
+        return image
+    }()
+
 }
 
 // MARK: - UI Setup
@@ -69,6 +79,7 @@ extension BoatSelectionCell {
         roundedBackgroundView.addSubview(imageView)
         roundedBackgroundView.addSubview(priceLabel)
         roundedBackgroundView.addSubview(descriptionLabel)
+        roundedBackgroundView.addSubview(moneyImageView)
 
         NSLayoutConstraint.activate([
             roundedBackgroundView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 5),
@@ -83,7 +94,11 @@ extension BoatSelectionCell {
             priceLabel.leftAnchor.constraint(equalTo: self.roundedBackgroundView.leftAnchor, constant: 5),
             descriptionLabel.topAnchor.constraint(equalTo: self.priceLabel.bottomAnchor, constant: 7),
             descriptionLabel.leftAnchor.constraint(equalTo: self.roundedBackgroundView.leftAnchor, constant: 5),
-            descriptionLabel.rightAnchor.constraint(equalTo: self.roundedBackgroundView.rightAnchor, constant: -7)
+            descriptionLabel.rightAnchor.constraint(equalTo: self.roundedBackgroundView.rightAnchor, constant: -7),
+            moneyImageView.heightAnchor.constraint(equalToConstant: 20),
+            moneyImageView.widthAnchor.constraint(equalToConstant: 20),
+            moneyImageView.leftAnchor.constraint(equalTo: self.priceLabel.rightAnchor, constant: 2),
+            moneyImageView.bottomAnchor.constraint(equalTo: self.priceLabel.bottomAnchor, constant: 2)
         ])
 
     }
