@@ -8,11 +8,10 @@
 
 import UIKit
 
-import UIKit
-
 class SelectionViewController: UIViewController {
 
     let kBoatSelectionCellIdentifier = "kBoatSelectionCellIdentifier"
+    var presenter: SelectionPresenterProtocol?
 
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
@@ -21,7 +20,6 @@ class SelectionViewController: UIViewController {
     }
 
     // MARK: - Properties
-    var titles: [String] = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight"]
 
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout())
@@ -73,14 +71,18 @@ extension SelectionViewController {
 extension SelectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return titles.count
+        return self.presenter?.numberOfCells() ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.kBoatSelectionCellIdentifier, for: indexPath) as! BoatSelectionCell
-        cell.priceLabel.text = titles[indexPath.item]
-        cell.descriptionLabel.text = "TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST "
-        return cell
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.kBoatSelectionCellIdentifier,
+                                                         for: indexPath) as? BoatSelectionCell,
+            let shipInfo = self.presenter?.shipInfo(atIndex: indexPath.row){
+            cell.priceLabel.text = shipInfo.price?.description ?? ""
+            cell.descriptionLabel.text = shipInfo.description
+            return cell
+        }
+        return UICollectionViewCell()
     }
 
 }

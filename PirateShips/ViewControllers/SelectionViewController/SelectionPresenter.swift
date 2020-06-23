@@ -21,6 +21,15 @@ class SelectionPresenter {
 
 extension SelectionPresenter: SelectionPresenterProtocol {
 
+    func numberOfCells() -> Int {
+        return self.ships.count
+    }
+
+    func shipInfo(atIndex index: Int) -> Ship? {
+        guard index < self.ships.count else { return nil }
+        return self.ships[index]
+    }
+
     func retrieveData() {
         self.selectionView?.startLoading()
         self.service.getObjectives(onSuccess: { (ships) in

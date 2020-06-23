@@ -8,6 +8,8 @@
 
 protocol SelectionPresenterProtocol: class {
     func retrieveData()
+    func numberOfCells() -> Int
+    func shipInfo(atIndex index: Int) -> Ship?
 }
 
 protocol SelectionViewControllerProtocol: class {
