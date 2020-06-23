@@ -33,13 +33,17 @@ extension SelectionPresenter: SelectionPresenterProtocol {
     func retrieveData() {
         self.selectionView?.startLoading()
         self.service.getObjectives(onSuccess: { (ships) in
-            self.ships = ships
-            self.selectionView?.stopLoading()
-            self.selectionView?.refreshTable()
+            DispatchQueue.main.async {
+                self.ships = ships
+                self.selectionView?.stopLoading()
+                self.selectionView?.refreshTable()
+            }
         }) { (error) in
             print(error?.localizedDescription as Any)
             if let errorMessage = error?.localizedDescription {
-                self.selectionView?.showMessage(errorMessage)
+                DispatchQueue.main.async {
+                    self.selectionView?.showMessage(errorMessage)
+                }
             }
         }
     }

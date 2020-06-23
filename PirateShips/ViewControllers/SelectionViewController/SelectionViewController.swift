@@ -16,7 +16,8 @@ class SelectionViewController: UIViewController {
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        self.setupUI()
+        self.presenter?.retrieveData()
     }
 
     // MARK: - Properties
@@ -84,5 +85,22 @@ extension SelectionViewController: UICollectionViewDelegate, UICollectionViewDat
         }
         return UICollectionViewCell()
     }
+}
 
+extension SelectionViewController: SelectionViewControllerProtocol {
+    func refreshTable() {
+        self.collectionView.reloadData()
+    }
+    
+    func startLoading() {
+        
+    }
+    
+    func stopLoading() {
+        
+    }
+    
+    func showMessage(_ message: String) {
+        
+    }
 }

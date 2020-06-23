@@ -14,13 +14,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
+
         if let windowScene = scene as? UIWindowScene {
 
             let window = UIWindow(windowScene: windowScene)
-            let timeline = SelectionViewController()
+            let selectionViewController = SelectionViewController()
+            let selectionPresenter = SelectionPresenter(shipsService: ShipsService())
+            selectionViewController.presenter = selectionPresenter
+            selectionPresenter.selectionView = selectionViewController
 
-            let navigation = UINavigationController(rootViewController: timeline)
+            let navigation = UINavigationController(rootViewController: selectionViewController)
             window.rootViewController = navigation
 
             self.window = window
