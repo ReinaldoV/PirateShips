@@ -39,7 +39,7 @@ class DetailViewController: UIViewController {
 
     lazy var priceLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "HelveticaNeueBold", size: 20)
+        label.font = UIFont(name: "HelveticaNeueBold", size: 25)
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -117,18 +117,18 @@ extension DetailViewController {
             imageView.leftAnchor.constraint(equalTo: self.backgroundView.leftAnchor),
             imageView.rightAnchor.constraint(equalTo: self.backgroundView.rightAnchor),
             imageView.heightAnchor.constraint(equalTo: self.backgroundView.heightAnchor, multiplier: 0.55),
-            priceLabel.topAnchor.constraint(equalTo: self.imageView.bottomAnchor, constant: 7),
-            priceLabel.leftAnchor.constraint(equalTo: self.backgroundView.leftAnchor, constant: 5),
+            priceLabel.topAnchor.constraint(equalTo: self.imageView.bottomAnchor, constant: 15),
+            priceLabel.leftAnchor.constraint(equalTo: self.backgroundView.leftAnchor, constant: 12),
             moneyImageView.heightAnchor.constraint(equalToConstant: 20),
             moneyImageView.widthAnchor.constraint(equalToConstant: 20),
             moneyImageView.leftAnchor.constraint(equalTo: self.priceLabel.rightAnchor, constant: 2),
             moneyImageView.bottomAnchor.constraint(equalTo: self.priceLabel.bottomAnchor, constant: 2),
             titleLabel.topAnchor.constraint(equalTo: self.priceLabel.bottomAnchor, constant: 7),
-            titleLabel.leftAnchor.constraint(equalTo: self.backgroundView.leftAnchor, constant: 5),
-            titleLabel.rightAnchor.constraint(equalTo: self.backgroundView.rightAnchor, constant: 7),
+            titleLabel.leftAnchor.constraint(equalTo: self.backgroundView.leftAnchor, constant: 12),
+            titleLabel.rightAnchor.constraint(equalTo: self.backgroundView.rightAnchor, constant: -18),
             descriptionLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 7),
-            descriptionLabel.leftAnchor.constraint(equalTo: self.backgroundView.leftAnchor, constant: 5),
-            descriptionLabel.rightAnchor.constraint(equalTo: self.backgroundView.rightAnchor, constant: 7),
+            descriptionLabel.leftAnchor.constraint(equalTo: self.backgroundView.leftAnchor, constant: 12),
+            descriptionLabel.rightAnchor.constraint(equalTo: self.backgroundView.rightAnchor, constant: -18),
             greetingButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
             greetingButton.rightAnchor.constraint(equalTo: self.backgroundView.rightAnchor, constant: -20),
             greetingButton.widthAnchor.constraint(equalToConstant: 46),
