@@ -81,26 +81,61 @@ extension BoatSelectionCell {
         roundedBackgroundView.addSubview(descriptionLabel)
         roundedBackgroundView.addSubview(moneyImageView)
 
-        NSLayoutConstraint.activate([
+        NSLayoutConstraint.activate(constraints())
+
+    }
+
+    private func constraints() -> [NSLayoutConstraint] {
+        var constraints = [NSLayoutConstraint]()
+        constraints.append(contentsOf: roundedBackgroundViewConstraints())
+        constraints.append(contentsOf: imageViewConstraints())
+        constraints.append(contentsOf: imageViewConstraints())
+        constraints.append(contentsOf: priceLabelConstraints())
+        constraints.append(contentsOf: descriptionLabelConstraints())
+        constraints.append(contentsOf: moneyImageViewConstraints())
+        return constraints
+    }
+
+    private func roundedBackgroundViewConstraints() -> [NSLayoutConstraint] {
+        return [
             roundedBackgroundView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 5),
             roundedBackgroundView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -5),
             roundedBackgroundView.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 5),
-            roundedBackgroundView.rightAnchor.constraint(equalTo: self.contentView.rightAnchor, constant: -5),
+            roundedBackgroundView.rightAnchor.constraint(equalTo: self.contentView.rightAnchor, constant: -5)
+        ]
+    }
+
+    private func imageViewConstraints() -> [NSLayoutConstraint] {
+        return [
             imageView.topAnchor.constraint(equalTo: self.roundedBackgroundView.topAnchor, constant: 0),
             imageView.heightAnchor.constraint(equalTo: self.roundedBackgroundView.heightAnchor, multiplier: 0.55),
             imageView.leftAnchor.constraint(equalTo: self.roundedBackgroundView.leftAnchor, constant: 0),
-            imageView.rightAnchor.constraint(equalTo: self.roundedBackgroundView.rightAnchor, constant: 0),
+            imageView.rightAnchor.constraint(equalTo: self.roundedBackgroundView.rightAnchor, constant: 0)
+        ]
+    }
+
+    private func priceLabelConstraints() -> [NSLayoutConstraint] {
+        return [
             priceLabel.topAnchor.constraint(equalTo: self.imageView.bottomAnchor, constant: 7),
-            priceLabel.leftAnchor.constraint(equalTo: self.roundedBackgroundView.leftAnchor, constant: 5),
+            priceLabel.leftAnchor.constraint(equalTo: self.roundedBackgroundView.leftAnchor, constant: 5)
+        ]
+    }
+
+    private func descriptionLabelConstraints() -> [NSLayoutConstraint] {
+        return [
             descriptionLabel.topAnchor.constraint(equalTo: self.priceLabel.bottomAnchor, constant: 7),
             descriptionLabel.leftAnchor.constraint(equalTo: self.roundedBackgroundView.leftAnchor, constant: 5),
             descriptionLabel.rightAnchor.constraint(equalTo: self.roundedBackgroundView.rightAnchor, constant: -7),
-            descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: self.roundedBackgroundView.bottomAnchor, constant: -14),
+            descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: self.roundedBackgroundView.bottomAnchor, constant: -14)
+        ]
+    }
+
+    private func moneyImageViewConstraints() -> [NSLayoutConstraint] {
+        return [
             moneyImageView.heightAnchor.constraint(equalToConstant: 20),
             moneyImageView.widthAnchor.constraint(equalToConstant: 20),
             moneyImageView.leftAnchor.constraint(equalTo: self.priceLabel.rightAnchor, constant: 2),
             moneyImageView.centerYAnchor.constraint(equalTo: self.priceLabel.centerYAnchor, constant: 4)
-        ])
-
+        ]
     }
 }

@@ -49,11 +49,14 @@ extension SelectionViewController {
         self.view.addSubview(collectionView)
         self.view.addSubview(safeAreaView)
 
+        NSLayoutConstraint.activate(constraints())
+    }
+
+    private func constraints() -> [NSLayoutConstraint] {
         var constraints = [NSLayoutConstraint]()
         constraints.append(contentsOf: collectionViewConstraints())
         constraints.append(contentsOf: safeAreaViewConstraints())
-
-        NSLayoutConstraint.activate(constraints)
+        return constraints
     }
 
     private func collectionViewConstraints() -> [NSLayoutConstraint] {
@@ -64,7 +67,7 @@ extension SelectionViewController {
             collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         ]
     }
-    
+
     private func safeAreaViewConstraints() -> [NSLayoutConstraint] {
         return [
             safeAreaView.topAnchor.constraint(equalTo: self.view.topAnchor),
