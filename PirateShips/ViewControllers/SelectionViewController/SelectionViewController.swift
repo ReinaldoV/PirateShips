@@ -81,7 +81,7 @@ extension SelectionViewController: UICollectionViewDelegate, UICollectionViewDat
             let shipInfo = self.presenter?.shipInfo(atIndex: indexPath.row) {
             cell.priceLabel.text = shipInfo.price?.description ?? ""
             cell.moneyImageView.isHidden = shipInfo.price == nil
-            cell.descriptionLabel.text = shipInfo.description
+            cell.descriptionLabel.text = shipInfo.title ?? shipInfo.description
             cell.imageView.load(url: shipInfo.imageURL)
             return cell
         }
