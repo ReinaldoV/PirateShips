@@ -31,6 +31,11 @@ class SelectionViewController: UIViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
+
+    lazy var safeAreaView: UIView = {
+        let view = UIView()
+        return view
+    }()
 }
 
 // MARK: - UI Setup
@@ -42,12 +47,17 @@ extension SelectionViewController {
         self.view.backgroundColor = .white
 
         self.view.addSubview(collectionView)
+        self.view.addSubview(safeAreaView)
 
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            collectionView.topAnchor.constraint(equalTo: self.safeAreaView.topAnchor),
             collectionView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
             collectionView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+            collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            safeAreaView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            safeAreaView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+            safeAreaView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+            safeAreaView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor)
         ])
     }
 
