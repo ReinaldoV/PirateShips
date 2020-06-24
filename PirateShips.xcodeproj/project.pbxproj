@@ -13,7 +13,6 @@
 		9E23B7B724A0C85A0050FFC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E23B7B524A0C85A0050FFC0 /* Main.storyboard */; };
 		9E23B7B924A0C85C0050FFC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E23B7B824A0C85C0050FFC0 /* Assets.xcassets */; };
 		9E23B7BC24A0C85C0050FFC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E23B7BA24A0C85C0050FFC0 /* LaunchScreen.storyboard */; };
-		9E23B7C724A0C85C0050FFC0 /* PirateShipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23B7C624A0C85C0050FFC0 /* PirateShipsTests.swift */; };
 		9E23B7D524A0DAE70050FFC0 /* BoatSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23B7D424A0DAE70050FFC0 /* BoatSelectionCell.swift */; };
 		9E23B7DA24A265980050FFC0 /* ShipsServiceDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23B7D924A265980050FFC0 /* ShipsServiceDTO.swift */; };
 		9E23B7DC24A265A60050FFC0 /* ShipDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23B7DB24A265A60050FFC0 /* ShipDTO.swift */; };
@@ -26,6 +25,7 @@
 		9E95B01224A3275800BB3F8D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E95B01124A3275800BB3F8D /* DetailViewController.swift */; };
 		9E95B01424A327C700BB3F8D /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E95B01324A327C700BB3F8D /* DetailPresenter.swift */; };
 		9E95B01624A327DA00BB3F8D /* DetailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E95B01524A327DA00BB3F8D /* DetailContracts.swift */; };
+		9E95B01A24A378CC00BB3F8D /* SelectionViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E95B01924A378CC00BB3F8D /* SelectionViewControllerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,6 @@
 		9E23B7BB24A0C85C0050FFC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E23B7BD24A0C85C0050FFC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E23B7C224A0C85C0050FFC0 /* PirateShipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PirateShipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E23B7C624A0C85C0050FFC0 /* PirateShipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PirateShipsTests.swift; sourceTree = "<group>"; };
 		9E23B7C824A0C85C0050FFC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E23B7D424A0DAE70050FFC0 /* BoatSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatSelectionCell.swift; sourceTree = "<group>"; };
 		9E23B7D924A265980050FFC0 /* ShipsServiceDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipsServiceDTO.swift; sourceTree = "<group>"; };
@@ -62,6 +61,7 @@
 		9E95B01124A3275800BB3F8D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9E95B01324A327C700BB3F8D /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		9E95B01524A327DA00BB3F8D /* DetailContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContracts.swift; sourceTree = "<group>"; };
+		9E95B01924A378CC00BB3F8D /* SelectionViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewControllerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +119,8 @@
 		9E23B7C524A0C85C0050FFC0 /* PirateShipsTests */ = {
 			isa = PBXGroup;
 			children = (
-				9E23B7C624A0C85C0050FFC0 /* PirateShipsTests.swift */,
+				9E95B01824A3775200BB3F8D /* DetailViewController */,
+				9E95B01724A3774300BB3F8D /* SelectionViewController */,
 				9E23B7C824A0C85C0050FFC0 /* Info.plist */,
 			);
 			path = PirateShipsTests;
@@ -199,6 +200,21 @@
 			path = DetailViewController;
 			sourceTree = "<group>";
 		};
+		9E95B01724A3774300BB3F8D /* SelectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9E95B01924A378CC00BB3F8D /* SelectionViewControllerTest.swift */,
+			);
+			path = SelectionViewController;
+			sourceTree = "<group>";
+		};
+		9E95B01824A3775200BB3F8D /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -252,6 +268,7 @@
 					};
 					9E23B7C124A0C85C0050FFC0 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 						TestTargetID = 9E23B7AB24A0C85A0050FFC0;
 					};
 				};
@@ -322,7 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E23B7C724A0C85C0050FFC0 /* PirateShipsTests.swift in Sources */,
+				9E95B01A24A378CC00BB3F8D /* SelectionViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +528,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KHMPSR3FEL;
 				INFOPLIST_FILE = PirateShipsTests/Info.plist;
@@ -522,6 +540,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = reinaldovillajavi.PirateShipsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PirateShips.app/PirateShips";
@@ -533,6 +552,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KHMPSR3FEL;
 				INFOPLIST_FILE = PirateShipsTests/Info.plist;
