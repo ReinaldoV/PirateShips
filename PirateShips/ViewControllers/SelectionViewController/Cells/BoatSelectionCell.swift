@@ -99,7 +99,7 @@ extension BoatSelectionCell {
             moneyImageView.heightAnchor.constraint(equalToConstant: 20),
             moneyImageView.widthAnchor.constraint(equalToConstant: 20),
             moneyImageView.leftAnchor.constraint(equalTo: self.priceLabel.rightAnchor, constant: 2),
-            moneyImageView.bottomAnchor.constraint(equalTo: self.priceLabel.bottomAnchor, constant: 2)
+            moneyImageView.centerYAnchor.constraint(equalTo: self.priceLabel.centerYAnchor, constant: 4)
         ])
 
     }
