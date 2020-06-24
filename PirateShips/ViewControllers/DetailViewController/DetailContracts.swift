@@ -13,4 +13,5 @@ protocol DetailPresenterProtocol: class {
     func title() -> String
     func description() -> String
     func price() -> String
+    func pirateGreeting() -> String
 }

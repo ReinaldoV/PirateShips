@@ -29,7 +29,7 @@ extension DetailPresenter: DetailPresenterProtocol {
     }
 
     func title() -> String {
-        return self.ship.title ?? ""
+        self.ship.title ?? ""
     }
 
     func description() -> String {
@@ -38,5 +38,9 @@ extension DetailPresenter: DetailPresenterProtocol {
 
     func price() -> String {
         self.ship.price?.description ?? ""
+    }
+
+    func pirateGreeting() -> String {
+        self.ship.greeting.rawValue
     }
 }

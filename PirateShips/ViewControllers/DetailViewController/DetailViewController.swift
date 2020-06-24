@@ -76,7 +76,7 @@ class DetailViewController: UIViewController {
     lazy var greetingButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .white
-        
+
         let config = UIImage.SymbolConfiguration(pointSize: 26, weight: .medium, scale: .default)
         let image = UIImage(systemName: "message.fill", withConfiguration: config)
         button.setImage(image, for: .normal)
@@ -85,8 +85,16 @@ class DetailViewController: UIViewController {
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.systemGray.cgColor
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         return button
     }()
+
+    @objc func buttonAction(sender: UIButton!) {
+        guard let pirateGreeting = self.detailPresenter?.pirateGreeting() else { return }
+        let alert = UIAlertController(title: "Crew Greeting", message: pirateGreeting, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: pirateGreeting + " Matey", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
 // MARK: - UI Setup
