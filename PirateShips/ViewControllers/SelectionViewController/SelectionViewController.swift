@@ -111,6 +111,7 @@ extension SelectionViewController: UICollectionViewDelegate, UICollectionViewDat
     }
 }
 
+// MARK: - SelectionViewControllerProtocol
 extension SelectionViewController: SelectionViewControllerProtocol {
     func refreshTable() {
         self.collectionView.reloadData()

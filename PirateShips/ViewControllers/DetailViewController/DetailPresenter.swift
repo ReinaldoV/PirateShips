@@ -19,6 +19,7 @@ class DetailPresenter {
     }
 }
 
+// MARK: - DetailPresenterProtocol
 extension DetailPresenter: DetailPresenterProtocol {
 
     func image() -> UIImage {
