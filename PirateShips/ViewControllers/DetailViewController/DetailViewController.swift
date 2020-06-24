@@ -108,33 +108,79 @@ extension DetailViewController {
         self.backgroundView.addSubview(descriptionLabel)
         self.backgroundView.addSubview(greetingButton)
 
-        NSLayoutConstraint.activate([
+        NSLayoutConstraint.activate(constraints())
+    }
+
+    private func constraints() -> [NSLayoutConstraint] {
+        var constraints = [NSLayoutConstraint]()
+        constraints.append(contentsOf: backgroundViewConstraints())
+        constraints.append(contentsOf: imageViewConstraints())
+        constraints.append(contentsOf: imageViewConstraints())
+        constraints.append(contentsOf: priceLabelConstraints())
+        constraints.append(contentsOf: moneyImageViewConstraints())
+        constraints.append(contentsOf: titleLabelConstraints())
+        constraints.append(contentsOf: descriptionLabelConstraints())
+        constraints.append(contentsOf: greetingButtonConstraints())
+        return constraints
+    }
+
+    private func backgroundViewConstraints() -> [NSLayoutConstraint] {
+        return [
             backgroundView.topAnchor.constraint(equalTo: self.view.topAnchor),
             backgroundView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
             backgroundView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            backgroundView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+        ]
+    }
+
+    private func imageViewConstraints() -> [NSLayoutConstraint] {
+        return [
             imageView.topAnchor.constraint(equalTo: self.backgroundView.topAnchor),
             imageView.leftAnchor.constraint(equalTo: self.backgroundView.leftAnchor),
             imageView.rightAnchor.constraint(equalTo: self.backgroundView.rightAnchor),
-            imageView.heightAnchor.constraint(equalTo: self.backgroundView.heightAnchor, multiplier: 0.55),
+            imageView.heightAnchor.constraint(equalTo: self.backgroundView.heightAnchor, multiplier: 0.55)
+        ]
+    }
+
+    private func priceLabelConstraints() -> [NSLayoutConstraint] {
+        return [
             priceLabel.topAnchor.constraint(equalTo: self.imageView.bottomAnchor, constant: 15),
-            priceLabel.leftAnchor.constraint(equalTo: self.backgroundView.leftAnchor, constant: 12),
+            priceLabel.leftAnchor.constraint(equalTo: self.backgroundView.leftAnchor, constant: 12)
+        ]
+    }
+
+    private func moneyImageViewConstraints() -> [NSLayoutConstraint] {
+        return [
             moneyImageView.heightAnchor.constraint(equalToConstant: 20),
             moneyImageView.widthAnchor.constraint(equalToConstant: 20),
             moneyImageView.leftAnchor.constraint(equalTo: self.priceLabel.rightAnchor, constant: 2),
-            moneyImageView.bottomAnchor.constraint(equalTo: self.priceLabel.bottomAnchor, constant: 2),
+            moneyImageView.bottomAnchor.constraint(equalTo: self.priceLabel.bottomAnchor, constant: 2)
+        ]
+    }
+
+    private func titleLabelConstraints() -> [NSLayoutConstraint] {
+        return [
             titleLabel.topAnchor.constraint(equalTo: self.priceLabel.bottomAnchor, constant: 7),
             titleLabel.leftAnchor.constraint(equalTo: self.backgroundView.leftAnchor, constant: 12),
-            titleLabel.rightAnchor.constraint(equalTo: self.backgroundView.rightAnchor, constant: -18),
+            titleLabel.rightAnchor.constraint(equalTo: self.backgroundView.rightAnchor, constant: -18)
+        ]
+    }
+
+    private func descriptionLabelConstraints() -> [NSLayoutConstraint] {
+        return [
             descriptionLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 7),
             descriptionLabel.leftAnchor.constraint(equalTo: self.backgroundView.leftAnchor, constant: 12),
             descriptionLabel.rightAnchor.constraint(equalTo: self.backgroundView.rightAnchor, constant: -18),
-            greetingButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            greetingButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -20)
+        ]
+    }
+
+    private func greetingButtonConstraints() -> [NSLayoutConstraint] {
+        return [
             greetingButton.rightAnchor.constraint(equalTo: self.backgroundView.rightAnchor, constant: -20),
             greetingButton.widthAnchor.constraint(equalToConstant: 46),
             greetingButton.heightAnchor.constraint(equalToConstant: 46)
-        ])
-
+        ]
     }
 }
 

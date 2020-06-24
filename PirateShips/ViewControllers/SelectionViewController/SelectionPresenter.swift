@@ -19,6 +19,7 @@ class SelectionPresenter {
     }
 }
 
+// MARK: - SelectionPresenterProtocol
 extension SelectionPresenter: SelectionPresenterProtocol {
 
     func numberOfCells() -> Int {
