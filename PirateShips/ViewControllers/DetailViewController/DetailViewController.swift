@@ -72,6 +72,21 @@ class DetailViewController: UIViewController {
         label.numberOfLines = 0
         return label
     }()
+
+    lazy var greetingButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .white
+        
+        let config = UIImage.SymbolConfiguration(pointSize: 26, weight: .medium, scale: .default)
+        let image = UIImage(systemName: "message.fill", withConfiguration: config)
+        button.setImage(image, for: .normal)
+        button.imageView?.tintColor = .systemGray
+        button.layer.cornerRadius = 23
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.systemGray.cgColor
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
 }
 
 // MARK: - UI Setup
@@ -83,6 +98,7 @@ extension DetailViewController {
         self.backgroundView.addSubview(moneyImageView)
         self.backgroundView.addSubview(titleLabel)
         self.backgroundView.addSubview(descriptionLabel)
+        self.backgroundView.addSubview(greetingButton)
 
         NSLayoutConstraint.activate([
             backgroundView.topAnchor.constraint(equalTo: self.view.topAnchor),
@@ -104,7 +120,11 @@ extension DetailViewController {
             titleLabel.rightAnchor.constraint(equalTo: self.backgroundView.rightAnchor, constant: 7),
             descriptionLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 7),
             descriptionLabel.leftAnchor.constraint(equalTo: self.backgroundView.leftAnchor, constant: 5),
-            descriptionLabel.rightAnchor.constraint(equalTo: self.backgroundView.rightAnchor, constant: 7)
+            descriptionLabel.rightAnchor.constraint(equalTo: self.backgroundView.rightAnchor, constant: 7),
+            greetingButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            greetingButton.rightAnchor.constraint(equalTo: self.backgroundView.rightAnchor, constant: -20),
+            greetingButton.widthAnchor.constraint(equalToConstant: 46),
+            greetingButton.heightAnchor.constraint(equalToConstant: 46)
         ])
 
     }
