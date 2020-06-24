@@ -24,6 +24,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             selectionPresenter.selectionView = selectionViewController
 
             let navigation = UINavigationController(rootViewController: selectionViewController)
+            navigation.navigationBar.setBackgroundImage(UIImage(), for: .default)
+            navigation.navigationBar.shadowImage = UIImage()
+            navigation.navigationBar.isTranslucent = true
+            navigation.view.backgroundColor = .clear
             window.rootViewController = navigation
 
             self.window = window
