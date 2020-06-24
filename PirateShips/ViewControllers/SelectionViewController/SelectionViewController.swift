@@ -87,6 +87,17 @@ extension SelectionViewController: UICollectionViewDelegate, UICollectionViewDat
         }
         return UICollectionViewCell()
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let presenter = self.presenter,
+            let ship = presenter.shipInfo(atIndex: indexPath.row),
+            let cell = self.collectionView.cellForItem(at: indexPath) as? BoatSelectionCell else { return }
+        let detailViewController = DetailViewController()
+        let detailPresenter = DetailPresenter(ship: ship, imageAlreadyLoaded: cell.imageView.image)
+        detailViewController.detailPresenter = detailPresenter
+
+        self.show(detailViewController, sender: nil)
+    }
 }
 
 extension SelectionViewController: SelectionViewControllerProtocol {
