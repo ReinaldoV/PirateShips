@@ -95,7 +95,7 @@ extension BoatSelectionCell {
             descriptionLabel.topAnchor.constraint(equalTo: self.priceLabel.bottomAnchor, constant: 7),
             descriptionLabel.leftAnchor.constraint(equalTo: self.roundedBackgroundView.leftAnchor, constant: 5),
             descriptionLabel.rightAnchor.constraint(equalTo: self.roundedBackgroundView.rightAnchor, constant: -7),
-            descriptionLabel.bottomAnchor.constraint(equalTo: self.roundedBackgroundView.bottomAnchor, constant: -14),
+            descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: self.roundedBackgroundView.bottomAnchor, constant: -14),
             moneyImageView.heightAnchor.constraint(equalToConstant: 20),
             moneyImageView.widthAnchor.constraint(equalToConstant: 20),
             moneyImageView.leftAnchor.constraint(equalTo: self.priceLabel.rightAnchor, constant: 2),
