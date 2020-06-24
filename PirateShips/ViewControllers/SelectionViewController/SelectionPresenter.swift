@@ -31,11 +31,9 @@ extension SelectionPresenter: SelectionPresenterProtocol {
     }
 
     func retrieveData() {
-        self.selectionView?.startLoading()
         self.service.getObjectives(onSuccess: { (ships) in
             DispatchQueue.main.async {
                 self.ships = ships
-                self.selectionView?.stopLoading()
                 self.selectionView?.refreshTable()
             }
         }) { (error) in
