@@ -63,16 +63,17 @@ extension SelectionViewController {
 
     private func collectionViewLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewFlowLayout()
-        let cellWidthHeightConstant: CGFloat = UIScreen.main.bounds.width * 0.45
+        let cellWidthConstant: CGFloat = UIScreen.main.bounds.width * 0.45
+        let cellHeightConstant: CGFloat = (cellWidthConstant * 1.3)
 
         layout.sectionInset = UIEdgeInsets(top: 0,
-                                           left: 10,
+                                           left: 15,
                                            bottom: 0,
-                                           right: 10)
+                                           right: 15)
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
-        layout.itemSize = CGSize(width: cellWidthHeightConstant, height: cellWidthHeightConstant)
+        layout.itemSize = CGSize(width: cellWidthConstant, height: cellHeightConstant)
 
         return layout
     }
@@ -124,6 +125,8 @@ extension SelectionViewController: SelectionViewControllerProtocol {
     }
 
     func showMessage(_ message: String) {
-
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
