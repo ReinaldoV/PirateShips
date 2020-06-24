@@ -27,6 +27,8 @@
 		9E95B01624A327DA00BB3F8D /* DetailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E95B01524A327DA00BB3F8D /* DetailContracts.swift */; };
 		9E95B01A24A378CC00BB3F8D /* SelectionViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E95B01924A378CC00BB3F8D /* SelectionViewControllerTest.swift */; };
 		9E95B01C24A37D2B00BB3F8D /* SelectionPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E95B01B24A37D2B00BB3F8D /* SelectionPresenterTest.swift */; };
+		9E95B01E24A3879E00BB3F8D /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E95B01D24A3879E00BB3F8D /* DetailViewControllerTests.swift */; };
+		9E95B02024A3882500BB3F8D /* DetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E95B01F24A3882500BB3F8D /* DetailPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		9E95B01524A327DA00BB3F8D /* DetailContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContracts.swift; sourceTree = "<group>"; };
 		9E95B01924A378CC00BB3F8D /* SelectionViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewControllerTest.swift; sourceTree = "<group>"; };
 		9E95B01B24A37D2B00BB3F8D /* SelectionPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionPresenterTest.swift; sourceTree = "<group>"; };
+		9E95B01D24A3879E00BB3F8D /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
+		9E95B01F24A3882500BB3F8D /* DetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +218,8 @@
 		9E95B01824A3775200BB3F8D /* DetailViewController */ = {
 			isa = PBXGroup;
 			children = (
+				9E95B01D24A3879E00BB3F8D /* DetailViewControllerTests.swift */,
+				9E95B01F24A3882500BB3F8D /* DetailPresenterTests.swift */,
 			);
 			path = DetailViewController;
 			sourceTree = "<group>";
@@ -344,6 +350,8 @@
 			files = (
 				9E95B01A24A378CC00BB3F8D /* SelectionViewControllerTest.swift in Sources */,
 				9E95B01C24A37D2B00BB3F8D /* SelectionPresenterTest.swift in Sources */,
+				9E95B01E24A3879E00BB3F8D /* DetailViewControllerTests.swift in Sources */,
+				9E95B02024A3882500BB3F8D /* DetailPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
