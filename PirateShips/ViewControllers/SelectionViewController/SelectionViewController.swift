@@ -34,6 +34,7 @@ class SelectionViewController: UIViewController {
 
     lazy var safeAreaView: UIView = {
         let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 }
