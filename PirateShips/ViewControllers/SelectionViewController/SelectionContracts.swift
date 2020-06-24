@@ -14,7 +14,5 @@ protocol SelectionPresenterProtocol: class {
 
 protocol SelectionViewControllerProtocol: class {
     func refreshTable()
-    func startLoading()
-    func stopLoading()
     func showMessage(_ message: String)
 }

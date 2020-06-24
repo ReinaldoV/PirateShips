@@ -116,14 +116,6 @@ extension SelectionViewController: SelectionViewControllerProtocol {
         self.collectionView.reloadData()
     }
 
-    func startLoading() {
-
-    }
-
-    func stopLoading() {
-
-    }
-
     func showMessage(_ message: String) {
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
