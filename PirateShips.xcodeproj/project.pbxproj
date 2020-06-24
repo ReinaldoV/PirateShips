@@ -26,6 +26,7 @@
 		9E95B01424A327C700BB3F8D /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E95B01324A327C700BB3F8D /* DetailPresenter.swift */; };
 		9E95B01624A327DA00BB3F8D /* DetailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E95B01524A327DA00BB3F8D /* DetailContracts.swift */; };
 		9E95B01A24A378CC00BB3F8D /* SelectionViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E95B01924A378CC00BB3F8D /* SelectionViewControllerTest.swift */; };
+		9E95B01C24A37D2B00BB3F8D /* SelectionPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E95B01B24A37D2B00BB3F8D /* SelectionPresenterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		9E95B01324A327C700BB3F8D /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		9E95B01524A327DA00BB3F8D /* DetailContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContracts.swift; sourceTree = "<group>"; };
 		9E95B01924A378CC00BB3F8D /* SelectionViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewControllerTest.swift; sourceTree = "<group>"; };
+		9E95B01B24A37D2B00BB3F8D /* SelectionPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionPresenterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				9E95B01924A378CC00BB3F8D /* SelectionViewControllerTest.swift */,
+				9E95B01B24A37D2B00BB3F8D /* SelectionPresenterTest.swift */,
 			);
 			path = SelectionViewController;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E95B01A24A378CC00BB3F8D /* SelectionViewControllerTest.swift in Sources */,
+				9E95B01C24A37D2B00BB3F8D /* SelectionPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,8 +10,8 @@ import Foundation
 
 class ShipsService {
 
-    func getObjectives(onSuccess: @escaping ([Ship]) -> Void,
-                       onError: @escaping (_ error: Error?) -> Void) {
+    func getShips(onSuccess: @escaping ([Ship]) -> Void,
+                  onError: @escaping (_ error: Error?) -> Void) {
 
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"

@@ -26,12 +26,12 @@ extension SelectionPresenter: SelectionPresenterProtocol {
     }
 
     func shipInfo(atIndex index: Int) -> Ship? {
-        guard index < self.ships.count else { return nil }
+        guard index < self.ships.count && index >= 0 else { return nil }
         return self.ships[index]
     }
 
     func retrieveData() {
-        self.service.getObjectives(onSuccess: { (ships) in
+        self.service.getShips(onSuccess: { (ships) in
             DispatchQueue.main.async {
                 self.ships = ships
                 self.selectionView?.refreshTable()
